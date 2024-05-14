@@ -1,12 +1,30 @@
+import NavLink from "./nav-link";
+import Search from "./search";
+
 export default function Navbar() {
   return (
     <nav>
-      <p>Tasty Trails</p>
-      <ul>
-        <li>Home</li>
-        <li>Recipes</li>
-        <li>About</li>
-      </ul>
+      <div>
+        <p>Tasty Trails</p>
+      </div>
+
+      <div>
+        <Search />
+      </div>
+
+      <div>
+        <ul>
+          <li>
+            <NavLink href="/home">Home</NavLink>
+          </li>
+          <li>
+            <NavLink href="/recipes">Recipes</NavLink>
+          </li>
+          <li>
+            <NavLink href="/about">About</NavLink>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
